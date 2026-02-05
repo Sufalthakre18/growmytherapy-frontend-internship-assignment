@@ -1,2 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --font-gopher: var(--font-gopher);
+}
+
+@layer components {
+  .logo-text {
+    font-family: var(--font-gopher);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: #223614;
+  }
+}

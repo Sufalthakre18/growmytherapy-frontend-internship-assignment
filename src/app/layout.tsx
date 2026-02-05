@@ -1,3 +1,4 @@
+import { gopher } from './fonts'
 import "./globals.css";
 
 export default function RootLayout({
@@ -6,7 +7,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={gopher.variable}>
       <body>
         {children}
       </body>
