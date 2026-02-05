@@ -34,7 +34,7 @@ export default function About() {
             <div className="relative">
 
               {/* Main arch image */}
-              <div className="relative w-[220px] md:w-[380px] aspect-[2/3] overflow-hidden rounded-t-full">
+              <div className="relative w-55 md:w-95 aspect-2/3 overflow-hidden rounded-t-full">
                 <Image
                   src="/images/about-main.webp"
                   alt="Flowers"
@@ -45,7 +45,7 @@ export default function About() {
               </div>
 
               {/* Overlapping circle image */}
-              <div className="absolute -bottom-0 -right-10 md:-bottom-12 md:-right-20 w-[120px] md:w-[260px] aspect-square overflow-hidden rounded-full">
+              <div className="absolute bottom-0 -right-10 md:-bottom-12 md:-right-20 w-30 md:w-65 aspect-square overflow-hidden rounded-full">
                 <Image
                   src="/images/about-circle.webp"
                   alt="Flowers detail"
