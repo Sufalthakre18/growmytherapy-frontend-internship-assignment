@@ -33,7 +33,7 @@ export default function Hero() {
           <Link
             href="/contact"
             className=" inline-block logo-text border border-[#223614] px-9 py-3 text-[16px] hover:bg-[#223614] hover:text-[#fbf6f1] transition-all ease-in duration-500 mb-9">
-            Connect with me 
+            Connect with me →
           </Link>
         </div>
 
