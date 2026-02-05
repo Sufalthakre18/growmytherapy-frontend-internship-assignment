@@ -8,7 +8,7 @@ export default function Header() {
 
     return (
         <header className="w-full relative bg-[#fbf6f1] z-2">
-            <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div className="w-full mx-auto p-6.5 md:px-6 md:py-4  flex items-center justify-between">
 
                 <button
                     onClick={() => setOpen(!open)}
@@ -20,7 +20,7 @@ export default function Header() {
                     <div className="relative w-6 h-4">
                         <span
                             className={`absolute left-0   bg-[#223614] transition-transform duration-400
-        ${open ? 'top-1/2 rotate-45 h-[0.8px] w-7.25' : 'w-8.75 top-0 h-[0.8px]'}`}
+        ${open ? 'top-1/2 rotate-45 h-[0.8px] w-7.25' : 'w-8.75 top-0 h-[0.2px]'}`}
                         />
                         <span
                             className={`hidden absolute left-0 w-full bg-[#223614] transition-opacity duration-400

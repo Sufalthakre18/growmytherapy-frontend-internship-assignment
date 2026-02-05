@@ -1,3 +1,4 @@
+import Header from '@/components/Navbar';
 import { gopher } from './fonts'
 import "./globals.css";
 
@@ -9,6 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={gopher.variable}>
       <body>
+        <Header/>
         {children}
       </body>
     </html>
