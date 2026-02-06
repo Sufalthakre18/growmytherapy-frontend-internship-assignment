@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import LazySection from './LazySection'
+import { drMayaContent } from '@/lib/content'
 
 const faqs = [
   {
@@ -45,7 +46,7 @@ export default function FAQ() {
           </h2></LazySection>
 
           <div className="border-t border-[#223614]">
-            {faqs.map((item, i) => {
+            {drMayaContent.faqs.map((item, i) => {
               const isOpen = open === i
               return (
                 <div key={i} className="border-b border-[#223614] py-6">
@@ -56,14 +57,14 @@ export default function FAQ() {
                     <LazySection><span className="flex items-center gap-4">
                        
                       <span className="logo-text text-4xl font-medium">{isOpen ? '—' : '+'}</span>
-                      {item.q}
+                      {item.question}
                     </span></LazySection>
                   </button>
                   
                  
                   {isOpen && (
                     <p className="mt-4 ml-10 max-w-lg logo-text text-base md:text-lg leading-relaxed">
-                      {item.a}
+                      {item.answer}
                     </p>
                   )}
                 </div>

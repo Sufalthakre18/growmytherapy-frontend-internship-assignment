@@ -66,7 +66,7 @@ export default function Header() {
 
           {/* Logo */}
           <Link href="/" className="md:ml-5 logo-text leading-tight text-[#223614] text-[18px] md:text-[30px] font-medium">
-            Lilac Template
+            Dr. Maya Reynolds, PsyD
           </Link>
 
           {/* Desktop Nav */}

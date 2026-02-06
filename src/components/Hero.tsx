@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import LazySection from './LazySection'
+import { drMayaContent } from '@/lib/content'
 
 export default function Hero() {
   return (
@@ -26,19 +27,19 @@ export default function Hero() {
         {/* Content */}
         <LazySection>
         <div className="md:mr-16 text-center text-[#223614]  md:pb-20 md:mb-8">
-          <h1 className="logo-text font-medium text-[50px] md:text-[65px] md:leading-16 leading-14 mb-8">
-            Live your life <br /> in full bloom
+          <h1 className="logo-text font-medium text-[50px] md:text-[65px] md:leading-14 leading-12 mb-8">
+           {drMayaContent.hero.h1} 
           </h1>
 
           <p className="logo-text font-light text-[18px] md:text-[20px] leading-7.25 mb-4 pb-3 ">
-            Therapy for Adults in Minneapolis, MN.
+            {drMayaContent.hero.subtitle}
           </p>
 
           <Link
             href="/contact"
             className="inline-block logo-text border border-[#223614] px-9 py-3 text-[16px] hover:bg-[#223614] hover:text-[#fbf6f1] transition-all ease-in duration-400 mb-9"
           >
-            Connect with me <span className="ml-1">→</span>
+           {drMayaContent.hero.cta} <span className="ml-1">→</span>
           </Link>
 
         </div>

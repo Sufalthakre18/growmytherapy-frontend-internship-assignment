@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import LazySection from './LazySection'
+import { drMayaContent } from '@/lib/content'
 
 export default function Professional() {
     type Section = 'education' | 'licensure' | 'certifications' | null
@@ -53,7 +54,7 @@ export default function Professional() {
                 {/* Title */}
                 <LazySection>
                 <h2 className="logo-text text-center text-[#223614] text-[30px] md:text-[38px] font-medium mb-10">
-                    My Professional Background
+                    Experience & Training
                 </h2></LazySection>
 
                 {/* Divider */}
@@ -61,17 +62,15 @@ export default function Professional() {
 
                 {/* Accordion */}
                 <Item id="education" title="Education">
-                    Euphorbia dianthus alchemilla muscari lavandula anthurium
-                    artemesia false artemesia moluccella gladiolus cirsium
-                    trollius anthurium prunus delphinium achillea.
+                    Doctor of Psychology (PsyD) in Clinical Psychology. My training focused on evidence-based treatment for anxiety, trauma, and stress-related disorders, with a strong emphasis on integrating research with compassionate, client-centered care.
                 </Item>
 
                 <Item id="licensure" title="Licensure">
-                   Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia false artemesia moluccella gladiolus cirsium trollius anthurium prunus delphinium achillea.
+                    Licensed Clinical Psychologist in the state of California. I provide therapy to adults through in-person sessions at my Santa Monica office as well as secure telehealth for clients located throughout California.
                 </Item>
 
                 <Item id="certifications" title="Certifications">
-                    Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia false artemesia moluccella gladiolus cirsium trollius anthurium prunus delphinium achillea.
+                     Trained in Cognitive Behavioral Therapy (CBT), EMDR, mindfulness-based approaches, and body-oriented techniques. I regularly pursue continuing education to stay current with best practices in trauma-informed and anxiety-focused care.
                 </Item>
 
             </div>

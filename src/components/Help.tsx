@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import LazySection from "./LazySection";
+import { drMayaContent } from "@/lib/content";
 
 export default function Help() {
     return (
@@ -27,26 +28,26 @@ export default function Help() {
                             <div>
                                 <LazySection>
                                 <h2 className="logo-text md:mt-20 text-[#223614] font-medium text-[36px] md:text-[38px] lg:text-[46px] leading-[1.2] mb-6">
-                                    You don’t have to do this all <em>alone</em>
+                                   {drMayaContent.help.h2} <em>Alone</em>
                                 </h2></LazySection>
 
                             </div>
                             <LazySection>
                             <p className="logo-text text-[#223614] text-[16px] md:text-[18px] leading-[1.6] mb-6">
-                                If you are facing any of these, there’s hope:
+                               {drMayaContent.help.intro}
                             </p></LazySection>
                             <LazySection>
+
+
                             <ul className="logo-text text-[#223614] text-[16px] md:text-[18px] leading-[1.7] space-y-3 mb-8 list-disc list-inside">
-                                <li>Persistent feelings of sadness or hopelessness</li>
-                                <li>Trouble focusing or making decisions</li>
-                                <li>Difficulty maintaining relationships</li>
-                                <li>Feeling constantly exhausted or unmotivated</li>
-                                <li>A pervasive sense of being overwhelmed</li>
-                            </ul>
+                                {drMayaContent.help.challenges.map((text,index)=>(
+                                        <li key={index}>{text}</li>
+                            
+                                ))}
+                                </ul>
 
                             <p className="logo-text text-[#223614] text-[16px] md:text-[18px] leading-[1.6]">
-                                With empathy and guidance, we&apos;ll work together to navigate the
-                                challenges life throws your way.
+                                {drMayaContent.help.closing}
                             </p></LazySection>
 
                         </div>

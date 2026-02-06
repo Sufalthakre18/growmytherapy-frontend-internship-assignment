@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import LazySection from "./LazySection";
+import { drMayaContent } from "@/lib/content";
 
 export default function About() {
   return (
@@ -11,22 +12,19 @@ export default function About() {
 
           {/* TEXT */}
           <div className="order-2 md:order-1 text-left max-w-xl justify-center">
-            <LazySection><h2 className="logo-text text-[#223614] text-[40px] md:text-[52px] font-medium mb-6">
-              Hi, I’m Lilac.
+            <LazySection><h2 className="logo-text text-[#223614] text-[40px] md:text-[52px] leading-10 font-medium mb-6">
+              {drMayaContent.about.h2}
             </h2></LazySection>
             <LazySection>
             <p className="logo-text text-[#223614] text-[16px] md:text-[18px] leading-[1.7] mb-10 md:pr-4">
-              I'm committed to providing a safe and supportive environment where
-              we can explore your thoughts, feelings, and behaviors. With empathy
-              and guidance, we'll work together to navigate the challenges life
-              throws your way.
+            {drMayaContent.about.bio} <br /> {drMayaContent.about.credentials}
             </p></LazySection>
             <LazySection>
             <Link
               href="/contact"
               className="inline-flex items-center md:mx-20 lg:mx-30 mx-15 gap-2 border border-[#223614] px-8 py-3 text-[14px] tracking-wide uppercase text-[#223614] hover:bg-[#223614] hover:text-[#efeae2] transition-all duration-400 ease-in"
             >
-              Let’s chat →
+              {drMayaContent.about.cta} →
             </Link></LazySection>
           </div>
 
@@ -48,7 +46,7 @@ export default function About() {
               {/* Overlapping circle image */}
               <div className="absolute bottom-0 -right-10 md:-bottom-12 md:-right-20 w-30 md:w-65 aspect-square overflow-hidden rounded-full">
                 <LazySection><Image
-                  src="/images/about-circle.webp"
+                  src="/images/office/Profileimage.jpg"
                   alt="Flowers detail"
                   fill
                   className="object-cover"
