@@ -23,7 +23,7 @@ export default function About() {
 
             <Link
               href="/contact"
-              className="inline-flex items-center md:mx-20 lg:mx-30 mx-15 gap-2 border border-[#223614] px-8 py-3 text-[14px] tracking-wide uppercase text-[#223614] hover:bg-[#223614] hover:text-[#efeae2] transition-all duration-300"
+              className="inline-flex items-center md:mx-20 lg:mx-30 mx-15 gap-2 border border-[#223614] px-8 py-3 text-[14px] tracking-wide uppercase text-[#223614] hover:bg-[#223614] hover:text-[#efeae2] transition-all duration-400 ease-in"
             >
               Let’s chat →
             </Link>

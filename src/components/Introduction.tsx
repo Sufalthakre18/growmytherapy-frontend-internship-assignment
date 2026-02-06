@@ -10,7 +10,7 @@ export default function Introduction() {
                 {/* Grid Container */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-0 h-full">
 
-                   
+
                     <div className="relative w-full order-1 md:order-2">
                         <div className="relative w-full aspect-4/3 md:h-full  overflow-hidden">
                             <Image
@@ -41,7 +41,7 @@ export default function Introduction() {
                         <div className="w-full mt-30 md:mt-50">
                             <Link
                                 href="/contact"
-                                className="logo-text flex items-center justify-center w-full text-center text-[#223614] border-t-[1.5px] border-[#223614] py-5 text-[15px] md:text-[17px] font-normal uppercase tracking-wide hover:bg-[#223614] hover:text-[#f4efe9] transition-all duration-300 ease-in-out"
+                                className="logo-text flex items-center justify-center w-full text-center text-[#223614] border-t border-[#223614] py-5 text-[15px] md:text-[17px] font-normal uppercase tracking-wide  hover:bg-[#223614] hover:text-[#fbf6f1] transition-all ease-in duration-400"
                             >
                                 GET IN TOUCH →
                             </Link>

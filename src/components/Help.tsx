@@ -50,7 +50,7 @@ export default function Help() {
                         <div className="w-full mt-30 ">
                             <Link
                                 href="/contact"
-                                className="logo-text flex items-center justify-center w-full text-center text-[#223614] border-t-[1.5px] border-[#223614] py-5 text-[15px] md:text-[17px] font-normal uppercase tracking-wide hover:bg-[#223614] hover:text-[#f4efe9] transition-all duration-300 ease-in-out"
+                                className="logo-text flex items-center justify-center w-full text-center text-[#223614] border-t border-[#223614] py-5 text-[15px] md:text-[17px] font-normal uppercase tracking-wide hover:bg-[#223614] hover:text-[#f4efe9] transition-all duration-400 ease-in"
                             >
                                 WORK WITH ME →
                             </Link>

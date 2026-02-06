@@ -25,10 +25,10 @@ export default function Professional() {
                     onClick={() => setOpen(isOpen ? null : id)}
                     className="w-full flex items-center justify-between py-4 text-left"
                 >
-                    <span className="logo-text text-[22px] md:text-[26px] text-[#223614]">
+                    <span className="logo-text text-[22px] md:text-[26px] font-extralight text-[#223614]">
                         {title}
                     </span>
-                    <span className="text-[28px] text-[#223614] leading-none">
+                    <span className="text-[28px] text-[#223614] font-extralight leading-tight">
                         {isOpen ? '–' : '+'}
                     </span>
                 </button>

@@ -1,84 +1,112 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 export default function Header() {
-    const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false)
+  const [lastScrollY, setLastScrollY] = useState(0)
+  const [visible, setVisible] = useState(true)
+  const [scrolled, setScrolled] = useState(false)
 
-    return (
-        <header className="w-full relative bg-[#fbf6f1] z-2">
-            <div className="w-full mx-auto p-6.5 md:px-6 md:py-4  flex items-center justify-between">
+  // Header scroll behavior
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY
 
-                <button
-                    onClick={() => setOpen(!open)}
-                    aria-label={open ? 'Close menu' : 'Open menu'}
-                    className="md:hidden relative z-10 h-8 w-8 flex items-center justify-center"
-                >
-                    <span className="sr-only">{open ? 'Close Menu' : 'Open Menu'}</span>
+      if (!open) {
+        if (y > lastScrollY && y > 120) setVisible(false)
+        else setVisible(true)
+      }
 
-                    <div className="relative w-6 h-4">
-                        <span
-                            className={`absolute left-0   bg-[#223614] transition-transform duration-400
-        ${open ? 'top-1/2 rotate-45 h-[0.8px] w-7.25' : 'w-8.75 top-0 h-[0.2px]'}`}
-                        />
-                        <span
-                            className={`hidden absolute left-0 w-full bg-[#223614] transition-opacity duration-400
-        ${open ? 'opacity-0' : 'top-1/2 -translate-y-1/2'}`}
-                        />
-                        <span
-                            className={`absolute left-0  bg-[#223614] transition-transform duration-400
-        ${open ? 'top-1/2 -rotate-45 h-[0.8px] w-7.25' : 'w-8.75 bottom-0 h-[1.5px]'}`}
-                        />
-                    </div>
-                </button>
+      setScrolled(y > 10)
+      setLastScrollY(y)
+    }
 
-                {/* Logo */}
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [lastScrollY, open])
 
-                <Link
-                    href="/"
-                    className="logo-text z-2 font-medium leading-5.25 text-[18px]  md:text-[32px] md:leading-9.5 text-[#223614]"
-                >
-                    Lilac Template
-                </Link>
+  // Lock scroll when menu open
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [open])
 
-                {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-10 text-sm ">
-                    <Link href="/blog" className="logo-text font-normal text-[19px] leading-7.75 text-[#223614] hover:opacity-60 transition-all duration-300 ease-in">
-                        Blog
-                    </Link>
-                    <Link href="/contact" className="logo-text font-normal text-[19px] leading-7.75 text-[#223614] hover:opacity-60 transition-all duration-300 ease-in">
-                        Contact
-                    </Link>
-                </nav>
+  return (
+    <>
+      {/* HEADER */}
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+          ${visible ? 'translate-y-0' : '-translate-y-full'}
+          ${scrolled ? 'bg-[#fbf6f1] shadow-md' : 'bg-transparent'}
+        `}
+      >
+        <div className="flex items-center justify-between px-4 py-3 md:px-6">
 
-
+          {/* Burger */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden z-50 w-8 h-8 flex items-center justify-center"
+            aria-label="Toggle menu"
+          >
+            <div className="relative w-6 h-4">
+              <span
+                className={`absolute left-0 h-px w-full bg-[#223614] transition-all
+                  ${open ? 'top-1/2 rotate-45' : 'top-0'}`}
+              />
+              <span
+                className={`absolute left-0 h-px w-full bg-[#223614] transition-all
+                  ${open ? 'top-1/2 -rotate-45' : 'bottom-0'}`}
+              />
             </div>
+          </button>
 
-            {/* Mobile Menu Overlay */}
-            <div className={`fixed inset-0  flex flex-col transition-all duration-500 ease-in-out ${open ? 'translate-y-0 opacity-100 bg-[#fbf6f1]' : 'translate-y-10 opacity-0 pointer-events-none bg-transparent'}`}>
-                {/* Top spacing (matches Squarespace header offset) */}
-                <div className="h-24" />
+          {/* Logo */}
+          <Link href="/" className="md:ml-5 logo-text leading-tight text-[#223614] text-[18px] md:text-[30px] font-medium">
+            Lilac Template
+          </Link>
 
-                {/* Menu content */}
-                <div className={`
-        flex-1 flex flex-col items-center justify-center
-        font-gopher font-medium
-        text-[21.5px] leading-[21.5px]
-        text-[#223614]
-        text-center `}>
-                    <nav className="flex flex-col gap-10">
-                        <Link href="/blog" onClick={() => setOpen(false)} className='logo-text font-light leading-8.5 text-[34px] text-[#223614]'>
-                            Blog
-                        </Link>
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex gap-10">
+            <Link href="/blog" className="logo-text text-[18px] text-[#223614] hover:opacity-60">
+              Blog
+            </Link>
+            <Link href="/contact" className="logo-text text-[18px] text-[#223614] hover:opacity-60">
+              Contact
+            </Link>
+          </nav>
+        </div>
+      </header>
 
-                        <Link href="/contact" onClick={() => setOpen(false)} className='logo-text font-light leading-8.5 text-[34px] text-[#223614]'>
-                            Contact
-                        </Link>
-                    </nav>
-                </div>
-            </div>
-
-        </header>
-    )
+      {/* MOBILE MENU — FULL SCREEN */}
+      <div
+        className={`fixed inset-0 z-40 bg-[#fbf6f1]
+           duration-500 transition-all ease-in-out
+          ${open ? 'translate-y-0 opacity-100 bg-[#fbf6f1]' : 'translate-y-5 opacity-1 pointer-events-none bg-transparent'}
+        `}
+      >
+        <div className="flex h-dvh items-center justify-center">
+          <nav className="flex flex-col gap-12 text-center">
+            <Link
+              href="/blog"
+              onClick={() => setOpen(false)}
+              className="logo-text text-[34px] font-light text-[#223614]"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="logo-text text-[34px] font-light text-[#223614]"
+            >
+              Contact
+            </Link>
+          </nav>
+        </div>
+      </div>
+    </>
+  )
 }
