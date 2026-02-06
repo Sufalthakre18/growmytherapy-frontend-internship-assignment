@@ -5,7 +5,7 @@ import LazySection from "./LazySection";
 export default function Footer() {
     return (
         <footer className="bg-[#f4efe9] text-[#223614] ">
-            {/* Main Footer Content */}
+
             <LazySection>
             <div className="px-6 md:px-[3.75vw] py-12 md:py-16 lg:py-25">
                 <div className="max-w-750 mx-auto">
