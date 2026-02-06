@@ -1,10 +1,12 @@
 // components/Footer.tsx
 import Link from "next/link";
+import LazySection from "./LazySection";
 
 export default function Footer() {
     return (
         <footer className="bg-[#f4efe9] text-[#223614] ">
             {/* Main Footer Content */}
+            <LazySection>
             <div className="px-6 md:px-[3.75vw] py-12 md:py-16 lg:py-25">
                 <div className="max-w-750 mx-auto">
                     
@@ -118,8 +120,7 @@ export default function Footer() {
                     </div>
 
                 </div>
-            </div>
-
+            </div></LazySection>
             <div className="bg-[#e5e0da] px-6 py-8 md:py-10">
                 <div className="max-w-750 mx-auto text-center">
                     

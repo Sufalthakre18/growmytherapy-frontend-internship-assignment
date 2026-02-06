@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import LazySection from './LazySection'
 
 export default function Professional() {
     type Section = 'education' | 'licensure' | 'certifications' | null
@@ -35,9 +36,10 @@ export default function Professional() {
 
                 {isOpen && children && (
                     <div className="pb-8 max-w-2xl">
+                        <LazySection>
                         <p className="logo-text text-[16px] md:text-[18px] leading-[1.7] text-[#223614]">
                             {children}
-                        </p>
+                        </p></LazySection>
                     </div>
                 )}
             </div>
@@ -49,9 +51,10 @@ export default function Professional() {
             <div className="max-w-5xl mx-auto px-6 md:px-50">
 
                 {/* Title */}
+                <LazySection>
                 <h2 className="logo-text text-center text-[#223614] text-[30px] md:text-[38px] font-medium mb-10">
                     My Professional Background
-                </h2>
+                </h2></LazySection>
 
                 {/* Divider */}
                 <div className="border-t border-[#223614] mb-2" />

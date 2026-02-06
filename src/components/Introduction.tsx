@@ -1,6 +1,7 @@
 // components/Introduction.tsx
 import Image from "next/image";
 import Link from "next/link";
+import LazySection from "./LazySection";
 
 export default function Introduction() {
     return (
@@ -10,20 +11,22 @@ export default function Introduction() {
                 {/* Grid Container */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-0 h-full">
 
-
+                    
                     <div className="relative w-full order-1 md:order-2">
+                      
                         <div className="relative w-full aspect-4/3 md:h-full  overflow-hidden">
-                            <Image
+                              <LazySection><Image
                                 src="/images/intro.webp"
                                 alt="Lifestyle flatlay with coffee and journal"
                                 className="object-cover object-center"
                                 priority
-                                fill />
+                                fill /></LazySection>
                         </div>
                     </div>
-
+                   
+                    
                     <div className="relative order-2 md:order-1  flex flex-col justify-between h-full">
-                        <div className="max-w-xl md:px-10 px-8 pt-10">
+                        <LazySection><div className="max-w-xl md:px-10 px-8 pt-10">
                             <h2 className="logo-text md:mt-20 text-[#223614] font-medium text-[36px] md:text-[48px] lg:text-[56px] leading-[1.2] mb-6">
                                 Live a fulfilling life.
                             </h2>
@@ -38,6 +41,8 @@ export default function Introduction() {
                                 want you to know that I'm here to help.
                             </p>
                         </div>
+                        </LazySection>
+                        <LazySection>
                         <div className="w-full mt-30 md:mt-50">
                             <Link
                                 href="/contact"
@@ -46,8 +51,8 @@ export default function Introduction() {
                                 GET IN TOUCH →
                             </Link>
                         </div>
+                        </LazySection>
                     </div>
-
                 </div>
 
 

@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <>
     <Hero/>
+  
     <Introduction/>
     <Speciality/>
     <Help/>
@@ -20,6 +21,7 @@ export default function Home() {
     <FAQ/>
     <Professional/>
     <CTA/>
+    
     <Footer/>
     </>
   );

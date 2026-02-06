@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { useState } from 'react'
+import LazySection from './LazySection'
 
 const faqs = [
   {
@@ -27,20 +28,21 @@ export default function FAQ() {
         {/* Image */}
         <div className="flex justify-center md:justify-start md:ml-20 lg:ml-28">
           <div className="relative w-48 md:w-100 aspect-2/3 overflow-hidden rounded-t-full">
-            <Image
+            <LazySection><Image
               src="/images/faq.webp"
               alt="Decorative florals"
               fill
               className="object-cover"
-            />
+            /></LazySection>
           </div>
         </div>
 
         {/* FAQ Content */}
         <div className="text-[#223614] mt-28">
+          <LazySection>
           <h2 className="logo-text text-4xl md:text-5xl font-medium mb-12">
             FAQs
-          </h2>
+          </h2></LazySection>
 
           <div className="border-t border-[#223614]">
             {faqs.map((item, i) => {
@@ -51,12 +53,14 @@ export default function FAQ() {
                     onClick={() => setOpen(isOpen ? null : i)}
                     className="w-full flex items-center justify-between text-left logo-text text-3xl md:text-4xl font-medium"
                   >
-                    <span className="flex items-center gap-4">
+                    <LazySection><span className="flex items-center gap-4">
+                       
                       <span className="logo-text text-4xl font-medium">{isOpen ? '—' : '+'}</span>
                       {item.q}
-                    </span>
+                    </span></LazySection>
                   </button>
-
+                  
+                 
                   {isOpen && (
                     <p className="mt-4 ml-10 max-w-lg logo-text text-base md:text-lg leading-relaxed">
                       {item.a}

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import LazySection from './LazySection'
 
 export default function Hero() {
   return (
@@ -7,6 +8,7 @@ export default function Hero() {
       <div className="mt-20 md:mt-15  w-full mx-auto md:px-6 grid grid-cols-1 md:grid-cols-2  gap-2 md:gap-1 items-center md:translate-y-0">
 
         {/* Image */}
+        <LazySection>
         <div className=" md:mr-16 flex justify-center md:justify-start pt-0 mx-auto md:p-6.5  ">
           <div className="w-44 md:mt-6 md:w-full aspect-2/3  overflow-hidden rounded-t-full">
             <Image
@@ -19,8 +21,10 @@ export default function Hero() {
             />
           </div>
         </div>
+        </LazySection>
 
         {/* Content */}
+        <LazySection>
         <div className="md:mr-16 text-center text-[#223614]  md:pb-20 md:mb-8">
           <h1 className="logo-text font-medium text-[50px] md:text-[65px] md:leading-16 leading-14 mb-8">
             Live your life <br /> in full bloom
@@ -38,7 +42,7 @@ export default function Hero() {
           </Link>
 
         </div>
-
+        </LazySection>
       </div>
     </section>
   )

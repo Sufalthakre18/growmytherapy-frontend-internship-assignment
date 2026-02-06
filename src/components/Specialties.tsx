@@ -1,5 +1,6 @@
 // components/Speciality.tsx
 import Image from "next/image";
+import LazySection from "./LazySection";
 
 export default function Speciality() {
   const specialties = [
@@ -28,9 +29,10 @@ export default function Speciality() {
       <div className="max-w-750 mx-auto">
         
         {/* Section Title */}
+        <LazySection>
         <h2 className="logo-text text-center text-[#223614] font-medium text-[42px] md:text-[46px]  leading-[1.2] mb-12 md:mb-16">
           My Specialties
-        </h2>
+        </h2></LazySection>
 
         {/* Grid of Specialty Cards */}
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4">
@@ -40,6 +42,7 @@ export default function Speciality() {
               className="relative bg-[#e5e0da] border border-[#223614] px-3 md:px-6 py-2  flex flex-col"
             >
               {/* Text Content */}
+              <LazySection>
               <div className="mb-8">
                 <h3 className="logo-text text-[#223614] font-medium text-[20px] md:text-[20px] leading-16 mb-4">
                   {specialty.title}
@@ -47,18 +50,19 @@ export default function Speciality() {
                 <p className="logo-text text-[#223614] font-extralight text-[14px] md:text-[14px] leading-5">
                   {specialty.description}
                 </p>
-              </div>
+              </div></LazySection>
 
               {/* Circular Image */}
               <div className="relative w-full aspect-square max-w-70 mx-auto mt-auto">
+                
                 <div className="relative w-full h-full rounded-full overflow-hidden">
-                  <Image
+                  <LazySection><Image
                     src={specialty.image}
                     alt={specialty.alt}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
+                  /></LazySection>
                 </div>
               </div>
             </li>
