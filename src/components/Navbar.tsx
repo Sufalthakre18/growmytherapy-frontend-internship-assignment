@@ -37,7 +37,6 @@ export default function Header() {
 
   return (
     <>
-      {/* HEADER */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
           ${visible ? 'translate-y-0' : '-translate-y-full'}
@@ -46,7 +45,6 @@ export default function Header() {
       >
         <div className="flex items-center justify-between px-4 py-3 md:px-6">
 
-          {/* Burger */}
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden z-50 w-8 h-8 flex items-center justify-center"
@@ -71,10 +69,10 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-10">
-            <Link href="/blog" className="body-text text-[18px] text-shadow-dark hover:opacity-60">
-              Blog
+            <Link href="/office" className="body-text text-[18px] text-shadow-dark hover:opacity-60">
+              Office
             </Link>
-            <Link href="/contact" className="body-text text-[18px] text-shadow-dark hover:opacity-60">
+            <Link href="#contact" className="body-text text-[18px] text-shadow-dark hover:opacity-60">
               Contact
             </Link>
           </nav>
@@ -91,14 +89,14 @@ export default function Header() {
         <div className="flex h-dvh items-center justify-center">
           <nav className="flex flex-col gap-12 text-center">
             <Link
-              href="/blog"
+              href="/office"
               onClick={() => setOpen(false)}
               className="body-text text-[34px] font-light text-shadow-dark"
             >
-              Blog
+              Office
             </Link>
             <Link
-              href="/contact"
+              href="#contact"
               onClick={() => setOpen(false)}
               className="body-text text-[34px] font-light text-shadow-dark"
             >

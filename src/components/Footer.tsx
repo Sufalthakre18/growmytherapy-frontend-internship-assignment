@@ -6,7 +6,7 @@ export default function Footer() {
     const { footer } = drMayaContent;
 
     return (
-        <footer className="bg-secondary text-dark">
+        <footer id="contact" className="bg-secondary text-dark">
 
             <LazySection>
                 <div className="px-6 md:px-[3.75vw] py-12 md:py-16 lg:py-25">
