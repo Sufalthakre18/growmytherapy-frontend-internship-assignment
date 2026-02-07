@@ -10,6 +10,15 @@ import LocationCard from './LocationCard'
 import SessionFormatCard from './SessionFormatCard'
 import OfficeCTA from './OfficeCTA'
 import LazySection from '../LazySection'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Therapy Office',
+  description:
+    'A calm and welcoming therapy office designed for comfort, privacy, and healing.',
+}
+
+
 
 export default function Office() {
   const [activeImage, setActiveImage] = useState(0)
