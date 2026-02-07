@@ -5,24 +5,24 @@ import { drMayaContent } from "@/lib/content";
 
 export default function About() {
   return (
-    <section className="bg-[#e5e0da] min-h-[90vh] flex items-center">
+    <section className="bg-muted/20 min-h-[90vh] flex items-center">
       <div className="w-full  mx-auto px-8 md:px-20 my-26">
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
 
           {/* TEXT */}
           <div className="order-2 md:order-1 text-left max-w-xl justify-center">
-            <LazySection><h2 className="logo-text text-[#223614] text-[40px] md:text-[52px] leading-10 font-medium mb-6">
+            <LazySection><h2 className="heading-text text-dark text-[40px] md:text-[52px] leading-10 font-medium mb-6">
               {drMayaContent.about.h2}
             </h2></LazySection>
             <LazySection>
-            <p className="logo-text text-[#223614] text-[16px] md:text-[18px] leading-[1.7] mb-10 md:pr-4">
+            <p className="body-text text-shadow-dark text-[16px] md:text-[18px] leading-[1.7] mb-10 md:pr-4">
             {drMayaContent.about.bio} <br /> {drMayaContent.about.credentials}
             </p></LazySection>
             <LazySection>
             <Link
               href="/contact"
-              className="inline-flex items-center md:mx-20 lg:mx-30 mx-15 gap-2 border border-[#223614] px-8 py-3 text-[14px] tracking-wide uppercase text-[#223614] hover:bg-[#223614] hover:text-[#efeae2] transition-all duration-400 ease-in"
+              className="inline-flex items-center md:mx-20 lg:mx-30 mx-15 gap-2 border border-primary px-8 py-3 text-[14px] tracking-wide uppercase text-dark hover:bg-[#3E6769] hover:text-light transition-all duration-400 ease-in"
             >
               {drMayaContent.about.cta} →
             </Link></LazySection>
@@ -35,7 +35,7 @@ export default function About() {
               {/* Main arch image */}
               <div className="relative w-55 md:w-95 aspect-2/3 overflow-hidden rounded-t-full">
                 <LazySection><Image
-                  src="/images/about-main.webp"
+                  src="/images/hero13.jpg"
                   alt="Flowers"
                   fill
                   className="object-cover"

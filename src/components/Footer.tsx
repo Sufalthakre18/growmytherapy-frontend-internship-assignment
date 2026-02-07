@@ -6,7 +6,7 @@ export default function Footer() {
     const { footer } = drMayaContent;
 
     return (
-        <footer className="bg-[#f4efe9] text-[#223614]">
+        <footer className="bg-secondary text-dark">
 
             <LazySection>
                 <div className="px-6 md:px-[3.75vw] py-12 md:py-16 lg:py-25">
@@ -17,19 +17,19 @@ export default function Footer() {
 
                             {/* Business Info */}
                             <div>
-                                <h3 className="logo-text leading-6 text-[28px] lg:text-[32px] font-medium mb-6">
+                                <h3 className="heading-text text-primary leading-6 text-[28px] lg:text-[32px] font-medium mb-6">
                                     {footer.businessName}
                                 </h3>
 
-                                <address className="logo-text not-italic text-[17px] leading-relaxed mb-6">
+                                <address className="body-text not-italic text-[17px] leading-relaxed mb-6">
                                     <p>{footer.address}</p>
                                 </address>
 
-                                <div className="logo-text text-[17px] space-y-1">
+                                <div className="body-text text-[17px] space-y-1">
                                     <p>
                                         <a
                                             href={`mailto:${footer.email}`}
-                                            className="underline hover:opacity-70 transition-opacity"
+                                            className="underline hover:opacity-70 hover:text-primary transition-opacity"
                                         >
                                             {footer.email}
                                         </a>
@@ -40,32 +40,32 @@ export default function Footer() {
 
                             {/* Hours */}
                             <div className="text-right ml-4">
-                                <h3 className="logo-text text-[28px] lg:text-[32px] font-medium mb-6">
+                                <h3 className="heading-text text-[28px] lg:text-[32px] font-medium mb-6">
                                     Hours
                                 </h3>
-                                <div className="logo-text text-[17px] leading-relaxed">
+                                <div className="body-text text-[17px] leading-relaxed">
                                     <p>{footer.hours}</p>
                                 </div>
                             </div>
 
                             {/* Navigation */}
                             <div className="text-center">
-                                <h3 className="logo-text text-[28px] lg:text-[32px] font-medium mb-6">
+                                <h3 className="heading-text text-[28px] lg:text-[32px] font-medium mb-6">
                                     Find
                                 </h3>
-                                <nav className="logo-text text-[17px] space-y-2">
+                                <nav className="body-text text-[17px] space-y-2">
                                     <p>
-                                        <Link href="/" className="underline hover:opacity-70 transition-opacity">
+                                        <Link href="/" className="underline hover:text-primary hover:opacity-70 transition-opacity">
                                             Home
                                         </Link>
                                     </p>
                                     <p>
-                                        <Link href="/contact" className="underline hover:opacity-70 transition-opacity">
+                                        <Link href="/contact" className="underline hover:text-primary hover:opacity-70 transition-opacity">
                                             Contact
                                         </Link>
                                     </p>
                                     <p>
-                                        <Link href="/blog" className="underline hover:opacity-70 transition-opacity">
+                                        <Link href="/blog" className="underline hover:text-primary hover:opacity-70 transition-opacity">
                                             Blog
                                         </Link>
                                     </p>
@@ -77,15 +77,15 @@ export default function Footer() {
                         <div className="md:hidden text-center space-y-10">
 
                             <div>
-                                <h3 className="logo-text text-[24px] font-medium mb-4">
+                                <h3 className="heading-text text-[24px] font-medium mb-4">
                                     {footer.businessName}
                                 </h3>
 
-                                <address className="logo-text font-extralight not-italic text-[16px] leading-tight mb-4">
+                                <address className="body-text font-extralight not-italic text-[16px] leading-tight mb-4">
                                     <p>{footer.address}</p>
                                 </address>
 
-                                <div className="logo-text font-extralight text-[16px] space-y-1">
+                                <div className="body-text hover:text-primary font-extralight text-[16px] space-y-1">
                                     <p>
                                         <a
                                             href={`mailto:${footer.email}`}
@@ -99,19 +99,19 @@ export default function Footer() {
                             </div>
 
                             <div>
-                                <h3 className="logo-text text-[24px] font-medium mb-4">
+                                <h3 className="heading-text text-[24px] font-medium mb-4">
                                     Hours
                                 </h3>
-                                <div className="logo-text font-extralight text-[16px] leading-tight">
+                                <div className="body-text font-extralight text-[16px] leading-tight">
                                     <p>{footer.hours}</p>
                                 </div>
                             </div>
 
                             <div>
-                                <h3 className="logo-text text-[24px] font-medium mb-4">
+                                <h3 className="heading-text text-[24px] font-medium mb-4">
                                     Find
                                 </h3>
-                                <nav className="logo-text text-[16px] space-y-2">
+                                <nav className="body-text text-[16px] space-y-2">
                                     <p>
                                         <Link href="/" className="font-extralight underline">
                                             Home
@@ -136,37 +136,37 @@ export default function Footer() {
             </LazySection>
 
             {/* Bottom Bar */}
-            <div className="bg-[#e5e0da] px-6 py-8 md:py-10">
+            <div className="bg-accent/20 px-6 py-8 md:py-10">
                 <div className="max-w-750 mx-auto text-center">
 
-                    <div className="logo-text text-[13px] md:text-[14px] mb-4 flex flex-wrap justify-center gap-x-4 gap-y-2">
-                        <Link href="/privacy" className="underline hover:opacity-70 transition-opacity">
+                    <div className="body-text text-[13px] md:text-[14px] mb-4 flex flex-wrap justify-center gap-x-4 gap-y-2">
+                        <Link href="/privacy" className="underline hover:text-primary hover:opacity-70 transition-opacity">
                             Privacy & Cookies Policy
                         </Link>
-                        <Link href="/good-faith" className="underline hover:opacity-70 transition-opacity">
+                        <Link href="/good-faith" className="underline hover:text-primary hover:opacity-70 transition-opacity">
                             Good Faith Estimate
                         </Link>
-                        <Link href="/terms" className="underline hover:opacity-70 transition-opacity">
+                        <Link href="/terms" className="underline hover:text-primary hover:opacity-70 transition-opacity">
                             Website Terms & Conditions
                         </Link>
-                        <Link href="/disclaimer" className="underline hover:opacity-70 transition-opacity">
+                        <Link href="/disclaimer" className="underline hover:text-primary hover:opacity-70 transition-opacity">
                             Disclaimer
                         </Link>
                     </div>
 
-                    <p className="logo-text text-[13px] md:text-[14px] mb-4">
+                    <p className="body-text text-[13px] md:text-[14px] mb-4">
                         Website Template Credits:{" "}
                         <a
                             href="https://my-portfolio-pearl-xi-96.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="underline hover:opacity-70 transition-opacity"
+                            className=" underline hover:text-primary hover:opacity-70 transition-opacity"
                         >
                             sufal thakre
                         </a>
                     </p>
 
-                    <p className="logo-text text-[13px] md:text-[14px]">
+                    <p className="body-text text-[13px] md:text-[14px]">
                         All Rights Reserved © 2024 {footer.businessName}.
                     </p>
 
@@ -175,3 +175,17 @@ export default function Footer() {
         </footer>
     );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

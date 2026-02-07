@@ -15,25 +15,57 @@
     color: #223614;
   }
 }
-
 @theme {
-  /* NEW Color Palette */
-  --color-primary: #5B8A8E;
-  --color-secondary: #F5F3EF;
-  --color-accent: #D4A574;
-  --color-dark: #2C3E3C;
+  /* Color Palette - Coastal Serenity */
+  --color-primary: #4A7C7E;
+  --color-secondary: #F7F5F2;
+  --color-accent: #C89B7B;
+  --color-dark: #2C3E3E;
   --color-light: #FFFFFF;
+  --color-muted: #8FA3A3;
   
-  --font-family-heading: 'Cormorant Garamond', serif;
-  --font-family-body: 'Inter', sans-serif;
+  /* Font Families - Use CSS Variables from layout.tsx */
+  --font-family-heading: var(--font-heading);
+  --font-family-body: var(--font-body);
 }
 
+/* Base Layer Styles */
 @layer base {
+  body {
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    background-color: var(--color-secondary);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+  }
+  
+  /* Utility Classes */
   .heading-text {
-    font-family: var(--font-family-heading);
+    font-family: var(--font-heading);
   }
   
   .body-text {
-    font-family: var(--font-family-body);
+    font-family: var(--font-body);
   }
 }
+
+
+
+
+/* 
+export const colors = {
+  primary: '#4A7C7E',      // Deep Teal - main brand color
+  secondary: '#F7F5F2',    // Warm Cream - backgrounds
+  accent: '#C89B7B',       // Warm Taupe - CTAs, highlights
+  dark: '#2C3E3E',         // Charcoal Green - text
+  light: '#FFFFFF',        // White - cards, overlays
+  muted: '#8FA3A3'         // Soft Sage - borders, subtle elements
+}
+
+export const fonts = {
+  heading: 'Cormorant Garamond, serif',
+  body: 'Inter, sans-serif'
+} */

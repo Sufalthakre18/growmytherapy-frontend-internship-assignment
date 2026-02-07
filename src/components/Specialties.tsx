@@ -6,12 +6,12 @@ export default function Speciality() {
  
 
   return (
-    <section className="relative bg-[#fbf6f1] py-16 md:py-24 px-[6vw] md:px-[3.75vw]">
+    <section className="relative bg-muted/20 py-16 md:py-24 px-[6vw] md:px-[3.75vw]">
       <div className="max-w-750 mx-auto">
         
         {/* Section Title */}
         <LazySection>
-        <h2 className="logo-text text-center text-[#223614] font-medium text-[42px] md:text-[46px]  leading-[1.2] mb-12 md:mb-16">
+        <h2 className="heading-text text-center text-dark font-medium text-[42px] md:text-[46px]  leading-[1.2] mb-12 md:mb-16">
           My Specialties
         </h2></LazySection>
 
@@ -20,15 +20,15 @@ export default function Speciality() {
           {drMayaContent.specialties.map((specialty, index) => (
             <li 
               key={index}
-              className="relative bg-[#e5e0da] border border-[#223614] px-3 md:px-6 py-2  flex flex-col"
+              className="relative bg-light border border-primary/20 hover:border-primary/40 px-3 md:px-6 py-2  flex flex-col"
             >
               {/* Text Content */}
               <LazySection>
               <div className="mb-8">
-                <h3 className="logo-text text-[#223614] font-medium text-[20px] md:text-[20px] leading-16 mb-4">
+                <h3 className="heading-text text-[#3E6769] font-medium text-[20px] md:text-[20px] leading-16 mb-4">
                   {specialty.title}
                 </h3>
-                <p className="logo-text text-[#223614] font-extralight text-[14px] md:text-[14px] leading-5">
+                <p className="body-text text-dark font-extralight text-[14px] md:text-[14px] leading-5">
                   {specialty.description}
                 </p>
               </div></LazySection>
@@ -53,3 +53,12 @@ export default function Speciality() {
     </section>
   );
 }
+
+
+
+
+
+
+
+
+

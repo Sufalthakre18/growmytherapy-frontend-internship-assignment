@@ -5,7 +5,7 @@ import { drMayaContent } from '@/lib/content'
 
 export default function Introduction() {
     return (
-        <section className="relative bg-[#f4efe9] min-h-screen md:min-h-96  flex items-center">
+        <section className="relative bg-light min-h-screen md:min-h-96  flex items-center">
             <div className="w-full mx-auto  ">
 
                 {/* Grid Container */}
@@ -16,7 +16,7 @@ export default function Introduction() {
                       
                         <div className="relative w-full aspect-4/3 md:h-full  overflow-hidden">
                               <LazySection><Image
-                                src="/images/intro.webp"
+                                src="/images/hero11.jpg"
                                 alt="Lifestyle flatlay with coffee and journal"
                                 className="object-cover object-center"
                                 priority
@@ -27,15 +27,15 @@ export default function Introduction() {
                     
                     <div className="relative order-2 md:order-1  flex flex-col justify-between h-full">
                         <LazySection><div className="max-w-xl md:px-10 px-8 pt-10">
-                            <h2 className="logo-text md:mt-20 text-[#223614] font-medium text-[36px] md:text-[48px] lg:text-[56px] leading-[1.2] mb-6">
+                            <h2 className="body-text md:mt-20 text-dark font-medium text-[36px] md:text-[48px] lg:text-[56px] leading-[1.2] mb-6">
                                 {drMayaContent.introduction.h2}
                             </h2>
 
-                            <p className="logo-text text-[#223614] text-[16px] md:text-[18px] leading-[1.6] mb-5">
+                            <p className="body-text text-dark text-[16px] md:text-[18px] leading-[1.6] mb-5">
                                 {drMayaContent.introduction.p1}
                             </p>
 
-                            <p className="logo-text text-[#223614] text-[16px] md:text-[18px] leading-[1.6] mb-8 md:mb-0">
+                            <p className="body-text text-dark text-[16px] md:text-[18px] leading-[1.6] mb-8 md:mb-0">
                                  {drMayaContent.introduction.p2}</p>
                         </div>
                         </LazySection>
@@ -43,7 +43,7 @@ export default function Introduction() {
                         <div className="w-full mt-30 md:mt-50">
                             <Link
                                 href="/contact"
-                                className="logo-text flex items-center justify-center w-full text-center text-[#223614] border-t border-[#223614] py-5 text-[15px] md:text-[17px] font-normal uppercase tracking-wide  hover:bg-[#223614] hover:text-[#fbf6f1] transition-all ease-in duration-400"
+                                className="text-dark border-primary hover:bg-[#3E6769] hover:text-light body-text flex items-center justify-center w-full text-center  border-t  py-5 text-[15px] md:text-[17px] font-normal uppercase tracking-wide  transition-all ease-in duration-400"
                             >
                                  {drMayaContent.introduction.cta} →
                             </Link>
@@ -57,3 +57,5 @@ export default function Introduction() {
         </section>
     );
 }
+
+

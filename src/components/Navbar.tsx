@@ -41,7 +41,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
           ${visible ? 'translate-y-0' : '-translate-y-full'}
-          ${scrolled ? 'bg-[#fbf6f1] shadow-md' : 'bg-transparent'}
+          ${scrolled ? 'bg-secondary shadow-md' : 'bg-transparent'}
         `}
       >
         <div className="flex items-center justify-between px-4 py-3 md:px-6">
@@ -54,27 +54,27 @@ export default function Header() {
           >
             <div className="relative w-6 h-4">
               <span
-                className={`absolute left-0 h-px w-full bg-[#223614] transition-all
+                className={`absolute left-0 h-px w-full bg-dark transition-all
                   ${open ? 'top-1/2 rotate-45' : 'top-0'}`}
               />
               <span
-                className={`absolute left-0 h-px w-full bg-[#223614] transition-all
+                className={`absolute left-0 h-px w-full bg-dark transition-all
                   ${open ? 'top-1/2 -rotate-45' : 'bottom-0'}`}
               />
             </div>
           </button>
 
           {/* Logo */}
-          <Link href="/" className="md:ml-5 logo-text leading-tight text-[#223614] text-[18px] md:text-[30px] font-medium">
+          <Link href="/" className="md:ml-5 font-heading leading-tight text-dark text-[18px] md:text-[30px] font-medium">
             Dr. Maya Reynolds, PsyD
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-10">
-            <Link href="/blog" className="logo-text text-[18px] text-[#223614] hover:opacity-60">
+            <Link href="/blog" className="body-text text-[18px] text-shadow-dark hover:opacity-60">
               Blog
             </Link>
-            <Link href="/contact" className="logo-text text-[18px] text-[#223614] hover:opacity-60">
+            <Link href="/contact" className="body-text text-[18px] text-shadow-dark hover:opacity-60">
               Contact
             </Link>
           </nav>
@@ -83,9 +83,9 @@ export default function Header() {
 
       {/* MOBILE MENU — FULL SCREEN */}
       <div
-        className={`fixed inset-0 z-40 bg-[#fbf6f1]
+        className={`fixed inset-0 z-40 bg-secondary
            duration-500 transition-all ease-in-out
-          ${open ? 'translate-y-0 opacity-100 bg-[#fbf6f1]' : 'translate-y-5 opacity-1 pointer-events-none bg-transparent'}
+          ${open ? 'translate-y-0 opacity-100 bg-secondary' : 'translate-y-5 opacity-1 pointer-events-none bg-transparent'}
         `}
       >
         <div className="flex h-dvh items-center justify-center">
@@ -93,14 +93,14 @@ export default function Header() {
             <Link
               href="/blog"
               onClick={() => setOpen(false)}
-              className="logo-text text-[34px] font-light text-[#223614]"
+              className="body-text text-[34px] font-light text-shadow-dark"
             >
               Blog
             </Link>
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="logo-text text-[34px] font-light text-[#223614]"
+              className="body-text text-[34px] font-light text-shadow-dark"
             >
               Contact
             </Link>

@@ -19,19 +19,19 @@ export const drMayaContent = {
         {
             title: "Anxiety & Panic",
             description: "Learn to manage chronic worry, panic, and physical tension using practical, evidence-based tools. Together, we’ll help you feel more grounded, present, and in control.",
-            image: "/images/spec-1.webp",
+            image: "/images/hero8.jpg",
             alt: "Person standing in minimalist room"
         },
         {
             title: "Trauma & EMDR",
             description: "I offer trauma-informed, carefully paced therapy to help you process difficult experiences safely. EMDR and other evidence-based approaches support healing at a pace that feels right for you.",
-            image: "/images/spec-2.webp",
+            image: "/images/hero10.jpg",
             alt: "Woman sitting outdoors smiling"
         },
         {
             title: "Burnout & Perfectionism",
             description: "Therapy can help you step out of constant pressure and reconnect with yourself. We’ll work toward more sustainable ways of living and working—without sacrificing your wellbeing.",
-            image: "/images/spec-3.webp",
+            image: "/images/hero9.jpg",
             alt: "Person working at organized desk"
         }
     ],
