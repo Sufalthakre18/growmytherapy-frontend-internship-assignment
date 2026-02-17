@@ -1,5 +1,4 @@
-# Grow My Therapy – Front-End Developer Internship Assignment
-
+# Grow My Therapy – Front-End Website
 ## 📌 Project Overview
 
 ---
@@ -12,9 +11,7 @@
 
 ---
 
-This project was completed as part of **Stage 2: Practical Assignment** for the **Front-End Developer Internship** at **Grow My Therapy**.
-
-The goal of this assignment was to:
+The goal of this was to:
 
 * Accurately **clone an existing homepage UI** to test layout precision and frontend skills
 * Creatively **redesign the cloned homepage** using a new therapist profile, theme, copy, and images
