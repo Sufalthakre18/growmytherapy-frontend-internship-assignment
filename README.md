@@ -6,7 +6,7 @@
 ## 🔗 Live Project Links
 
 * **Live Website (Vercel):** [https://dr-maya-reynolds-therapy-three.vercel.app/](https://dr-maya-reynolds-therapy-three.vercel.app/)
-* **GitHub Repository:** [https://github.com/Sufalthakre18/growmytherapy-frontend-internship-assignment](https://github.com/Sufalthakre18/growmytherapy-frontend-internship-assignment)
+* **GitHub Repository:** [https://github.com/Sufalthakre18/growmytherapy-frontend-website](https://github.com/Sufalthakre18/growmytherapy-frontend-website)
 * **Video Walkthrough (Loom):** [https://youtu.be/xd24b811zPA](https://youtu.be/xd24b811zPA)
 
 ---
